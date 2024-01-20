@@ -1,3 +1,4 @@
+/* Reset CSS */
 *,
 *::after,
 *::before {
@@ -6,22 +7,19 @@
   margin: 0;
 }
 
+/* Root Variables */
 :root {
-    --primary_color: #ffffff;
-    --secund_color: rgba(17, 120, 17, 0.702);
-    --border_radious: 10px;
-  
-    /* Nuevos colores de la paleta */
-    --color_fondo: #f2f2f2;
-    --color_texto_primario: #2c6e49;
-    --color_texto_secundario: #d6f2b9;
-    --color_destacado: #1ab25cc2;
-  }
+  --primary_color: #f5f5f5; /* Blanco */
+  --secund_color: #3498db; /* Azul claro */
+  --border_radious: 10px;
+}
 
+/* Global Styles */
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--primary_color);
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -31,15 +29,15 @@ html {
   margin: 0 auto;
 }
 
+/* Hero Section */
 .hero {
   width: 100%;
   height: 65vh;
   background-image: linear-gradient(
     180deg,
-    rgba(81, 81, 113, 0.791) 0%,
-    rgba(17, 120, 17, 0.567) 100%
-    ),
-    url(../imagenes/hero.jpg);
+    rgba(81, 81, 113, 0.766) 0%,
+    rgba(17, 120, 17, 0.394) 100%
+  );
   background-position: center center;
   object-fit: cover;
   padding: 0.1px;
@@ -83,10 +81,12 @@ html {
   padding: 20px 40px;
   border-radius: var(--border_radious);
 }
+
 .hero_name {
   color: var(--primary_color);
   font-size: 2rem;
 }
+
 .hero_job {
   color: var(--primary_color);
   font-weight: bold;
@@ -101,12 +101,16 @@ html {
   }
 }
 
-/*ABOUT*/
+/* About Section */
 .about {
   height: fit-content;
 }
+
 .about_container {
   position: relative;
+  background-color: var(--secund_color);
+  padding: 20px;
+  border-radius: var(--border_radious);
 }
 
 .about_img {
@@ -123,16 +127,19 @@ html {
   height: 100%;
   border-radius: 100%;
 }
+
 .aboute_title {
-  color: var(--secund_color);
+  color: var(--primary_color);
   text-align: center;
   margin-bottom: 20px;
 }
+
 .about_p {
   font-size: x-large;
   text-align: left;
   font-weight: 350;
   padding-bottom: 20px;
+  color: var(--primary_color);
 }
 
 .about_p2 {
@@ -151,10 +158,10 @@ html {
   }
 }
 
-/* Trabajos */
+/* Projects Section */
 .trabajos {
   height: auto;
-  background-color: #f2f2f2;
+  background-color: var(--primary_color);
 }
 
 .trabajos_title {
@@ -182,28 +189,33 @@ html {
   background-color: #d6f2b9;
   flex-grow: 1;
 }
+
 .galeria_img {
   width: 100%;
   max-height: 100px;
 }
+
 .galeria_picture {
   width: 100%;
   max-height: 250px;
   border-top-right-radius: var(--border_radious);
   border-top-left-radius: var(--border_radious);
 }
+
 .item_title,
 .item_subtitle,
 .item_descripcion,
 .item_repositorio {
   text-align: center;
 }
+
 .item_title {
   margin-top: 20px;
   font-weight: bold;
   font-size: 500;
   color: #2c6e49;
 }
+
 .item_subtitle {
   font-weight: 300;
   margin-bottom: 10px;
@@ -239,18 +251,23 @@ html {
   }
 }
 
-/* CONTACTO */
-
+/* Contact Section */
 .contactar_title {
   margin: 40px 0;
   color: var(--secund_color);
   text-align: center;
 }
+
 .contactar_form {
   position: relative;
+  background-color: var(--primary_color);
+  border-radius: var(--border_radious);
+  padding: 20px;
 }
+
 .contactar_nombre,
-.contactar_email {
+.contactar_email,
+.contactar_textA {
   width: 49%;
   padding: 15px;
   margin-bottom: 15px;
@@ -270,17 +287,6 @@ html {
   color: rgba(0, 0, 0, 1);
 }
 
-.contactar_textA {
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 80px;
-  max-height: 80px;
-  outline: none;
-  padding: 15px;
-  margin-bottom: 15px;
-  color: rgba(0, 0, 0, 0.7);
-}
-
 .contactar_textA::placeholder {
   color: rgba(0, 0, 0, 0.7);
 }
@@ -298,6 +304,7 @@ html {
   border: none;
   margin-bottom: 50px;
 }
+
 .contactar_submit:hover {
   background-color: black;
   color: white;
@@ -322,8 +329,7 @@ html {
   }
 }
 
-/* FOOTER */
-
+/* Footer Section */
 .footer {
   background-color: var(--secund_color);
   height: 20vh;
@@ -348,6 +354,7 @@ html {
   font-size: 2rem;
   color: black;
 }
+
 .bi-facebook:hover {
   color: rgb(29, 65, 196);
 }
@@ -355,15 +362,19 @@ html {
 .bi-linkedin:hover {
   color: rgb(29, 65, 196);
 }
+
 .bi-instagram:hover {
   color: rgb(224, 113, 219);
 }
+
 .bi-twitter:hover {
   color: rgb(5, 119, 241);
 }
+
 .bi-whatsapp:hover {
   color: rgb(70, 234, 89);
 }
+
 .bi-github:hover {
   color: rgb(255, 69, 0);
 }
